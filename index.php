@@ -4,18 +4,18 @@ $server="localhost";
 $user="root";
 $pass="";
 
-$conn=mysqli_connect($server, $user, $pass, "mydb");
+$conn=mysqli_connect($server, $user, $pass, "bdl");
 
 if(isset($_POST['submit'])){
     $username=$_POST['username'];
     $password=md5($_POST['password']);
-    $sql="INSERT INTO tbluser(username, password) VALUES ('$username', '$password')";
+    $sql="INSERT INTO rk(username, password) VALUES ('$username', '$password')";
     $result=mysqli_query($conn, $sql);
 }
 
 if(isset($_GET['id'])){
     $id=$_GET['id'];
-    $sql="DELETE FROM tbluser WHERE id=$id";
+    $sql="DELETE FROM rk WHERE id=$id";
     $result=mysqli_query($conn, $sql);
 }
 
@@ -30,7 +30,7 @@ if(isset($_GET['id'])){
     <h1>No, this is Peter</h1>
 
 <?php
-$sql="SELECT * FROM tbluser ORDER BY username ASC";
+$sql="SELECT * FROM rk ORDER BY username ASC";
 $result=mysqli_query($conn, $sql);
 while($rad=mysqli_fetch_assoc($result)){ ?>
 
