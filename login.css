@@ -1,17 +1,108 @@
 body {
-    background-color: #D3D3D3;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .logo {
-    margin-top: 10px; 
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px; /* Anpassa storleken på logotypen om det behövs */
+    height: auto;
     object-fit: contain;
-    display: inline-block;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.checkbox-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;  /* Flexbox för att placera bocken och texten på samma rad */
+    justify-content: center; /* Justera så att de är vänsterställda */
+}
+
+.checkbox-container input {
+    margin-right: 10px; /* Skapar lite mellanrum mellan checkboxen och texten */
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    color: #333;
+    margin: 0;  /* Se till att det inte finns något extra mellanrum runt etiketten */
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
 }

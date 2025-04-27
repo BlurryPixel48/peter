@@ -1,0 +1,78 @@
+/* Grundläggande stil för hela sidan */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Välkomsttext */
+.welcome {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.welcome h1 {
+    color: #333;
+}
+
+/* Tabellstil */
+.ticket-container {
+    margin-top: 30px;
+    width: 80%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.ticket-container table {
+    width: 100%;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.ticket-container th, .ticket-container td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.ticket-container th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Färger för status */
+.green {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.yellow {
+    background-color: #FFC107;
+    color: black;
+}
+
+.red {
+    background-color: #F44336;
+    color: white;
+}
+
+/* Knapp för att skapa nytt ärende */
+.create-ticket {
+    margin-top: 30px;
+}
+
+.create-ticket .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.create-ticket .btn:hover {
+    background-color: #0056b3;
+}
