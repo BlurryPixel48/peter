@@ -1,21 +1,36 @@
-<!DOCTYPE html>
 <?php
+session_start(); 
+
 $server = "localhost";
 $user = "root";
 $pass = "";
 $conn = mysqli_connect($server, $user, $pass, "bdl");
 
+$error_message = ''; 
+
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
-    $password = md5($_POST['password']);  // Användning av MD5, tänk på säkerhet för framtida system
-    $remember_me = isset($_POST['remember_me']) ? 1 : 0;
+    $password = md5($_POST['password']);  
 
-    // Exempel på att lagra användare, anpassa query för din databasstruktur
-    $sql = "INSERT INTO rk (email, password, remember_me) VALUES ('$email', '$password', '$remember_me')";
+    
+    $sql = "SELECT * FROM rk WHERE email = '$email' AND password = '$password'";
     $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        
+        $user = mysqli_fetch_assoc($result);
+        $_SESSION['user_id'] = $user['id'];  
+        $_SESSION['email'] = $user['email'];  
+        header("Location: index.php"); 
+        exit();
+    } else {
+        $error_message = "Fel e-post eller lösenord!";
+    }
 }
 ?>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +38,20 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+    
     <div class="logo">
-        <img src="TechSolve AB logo.png" alt="logo">
+        <img src="TechSolve AB logo.png" alt="TechSolve AB Logo">
     </div>
 
     <div class="login-container">
         <form action="login.php" method="POST">
             <h2>Logga in</h2>
+            
+            
+            <?php if ($error_message): ?>
+                <div class="error-message"><?php echo $error_message; ?></div>
+            <?php endif; ?>
+
             <div class="input-container">
                 <input type="email" name="email" placeholder="Ange din e-post" required>
             </div>
@@ -45,7 +67,12 @@ if (isset($_POST['submit'])) {
             <div class="forgot-password">
                 <a href="#">Glömt lösenord?</a>
             </div>
+            
+            <div class="register-link">
+                <p>Har du inget konto? <a href="signup.php">Registrera dig här</a></p>
+            </div>
         </form>
     </div>
+
 </body>
 </html>

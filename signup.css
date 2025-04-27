@@ -21,7 +21,7 @@ body {
     object-fit: contain;
 }
 
-.login-container {
+.signup-container {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
@@ -55,23 +55,6 @@ input:focus {
     outline: none;
 }
 
-.checkbox-container {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;  
-    justify-content: center; 
-}
-
-.checkbox-container input {
-    margin-right: 10px; 
-}
-
-.checkbox-container label {
-    font-size: 14px;
-    color: #333;
-    margin: 0;  
-}
-
 .btn {
     width: 100%;
     padding: 12px;
@@ -87,41 +70,27 @@ input:focus {
     background-color: #0056b3;
 }
 
-.forgot-password {
-    margin-top: 10px;
-}
-
-.forgot-password a {
-    font-size: 14px;
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.forgot-password a:hover {
-    text-decoration: underline;
-}
-
-.register-link {
+.login-link {
     margin-top: 20px;
 }
 
-.register-link p {
+.login-link p {
     font-size: 14px;
     color: #333;
 }
 
-.register-link a {
+.login-link a {
     color: #007BFF;
     text-decoration: none;
 }
 
-.register-link a:hover {
+.login-link a:hover {
     text-decoration: underline;
 }
+
 
 .error-message {
     color: red;
     font-size: 14px;
     margin-bottom: 15px;
-    text-align: center;
 }

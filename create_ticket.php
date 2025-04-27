@@ -1,24 +1,35 @@
 <?php
+session_start(); 
+
 $server = "localhost";
 $user = "root";
 $pass = "";
 $conn = mysqli_connect($server, $user, $pass, "bdl");
+
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $titel = $_POST['titel'];
     $beskrivning = $_POST['beskrivning'];
     $kategori = $_POST['kategori'];
     $prioritet = $_POST['prioritet'];
-    $skapad_av = "Admin";  
-    $datum = date('Y-m-d H:i:s');  // Sätt aktuellt datum och tid
+    $skapad_av = $_SESSION['email']; 
+    $datum = date('Y-m-d H:i:s');  
 
     
-    $sql = "INSERT INTO ärenden (titel, beskrivning, kategori, prioritet, skapad_av, datum) 
-            VALUES ('$titel', '$beskrivning', '$kategori', '$prioritet', '$skapad_av', '$datum')";
+    $stmt = mysqli_prepare($conn, "INSERT INTO ärenden (titel, beskrivning, kategori, prioritet, skapad_av, datum) VALUES (?, ?, ?, ?, ?, ?)");
+    
+    
+    mysqli_stmt_bind_param($stmt, "ssssss", $titel, $beskrivning, $kategori, $prioritet, $skapad_av, $datum);
 
-   
-    if (mysqli_query($conn, $sql)) {
-        echo "Ärendet har skapats!";
+    
+    if (mysqli_stmt_execute($stmt)) {
+        header("Location: index.php");
+        exit();
     } else {
         echo "Fel vid skapande av ärende: " . mysqli_error($conn);
     }
