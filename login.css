@@ -16,7 +16,7 @@ body {
 }
 
 .logo img {
-    width: 150px; /* Anpassa storleken på logotypen om det behövs */
+    width: 150px; 
     height: auto;
     object-fit: contain;
 }
@@ -58,18 +58,18 @@ input:focus {
 .checkbox-container {
     margin-bottom: 20px;
     display: flex;
-    align-items: center;  /* Flexbox för att placera bocken och texten på samma rad */
-    justify-content: center; /* Justera så att de är vänsterställda */
+    align-items: center;  
+    justify-content: center; 
 }
 
 .checkbox-container input {
-    margin-right: 10px; /* Skapar lite mellanrum mellan checkboxen och texten */
+    margin-right: 10px; 
 }
 
 .checkbox-container label {
     font-size: 14px;
     color: #333;
-    margin: 0;  /* Se till att det inte finns något extra mellanrum runt etiketten */
+    margin: 0;  
 }
 
 .btn {

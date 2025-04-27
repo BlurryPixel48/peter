@@ -1,4 +1,4 @@
-/* Grundläggande stil för hela sidan */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +9,7 @@ body {
     align-items: center;
 }
 
-/* Välkomsttext */
+
 .welcome {
     margin-top: 30px;
     text-align: center;
@@ -19,7 +19,7 @@ body {
     color: #333;
 }
 
-/* Tabellstil */
+
 .ticket-container {
     margin-top: 30px;
     width: 80%;
@@ -44,7 +44,7 @@ body {
     color: white;
 }
 
-/* Färger för status */
+
 .green {
     background-color: #4CAF50;
     color: white;
@@ -60,7 +60,7 @@ body {
     color: white;
 }
 
-/* Knapp för att skapa nytt ärende */
+
 .create-ticket {
     margin-top: 30px;
 }

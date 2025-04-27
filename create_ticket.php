@@ -1,24 +1,22 @@
 <?php
-// Koppla till databasen (ändra vid behov)
 $server = "localhost";
 $user = "root";
 $pass = "";
 $conn = mysqli_connect($server, $user, $pass, "bdl");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Hämta inmatad data från formuläret
     $titel = $_POST['titel'];
     $beskrivning = $_POST['beskrivning'];
     $kategori = $_POST['kategori'];
     $prioritet = $_POST['prioritet'];
-    $skapad_av = "Admin";  // Detta kan ändras till dynamiskt baserat på den inloggade användaren
+    $skapad_av = "Admin";  
     $datum = date('Y-m-d H:i:s');  // Sätt aktuellt datum och tid
 
-    // SQL-fråga för att spara ärendet i databasen (ändra tabellen till 'ärenden')
+    
     $sql = "INSERT INTO ärenden (titel, beskrivning, kategori, prioritet, skapad_av, datum) 
             VALUES ('$titel', '$beskrivning', '$kategori', '$prioritet', '$skapad_av', '$datum')";
 
-    // Kör SQL-frågan
+   
     if (mysqli_query($conn, $sql)) {
         echo "Ärendet har skapats!";
     } else {

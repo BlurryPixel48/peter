@@ -1,5 +1,4 @@
 <?php
-// Databasanslutning
 $server = "localhost";
 $user = "root";
 $pass = "";
@@ -9,8 +8,8 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Hämta alla ärenden från databasen
-$sql = "SELECT * FROM ärenden"; // Byt ut 'ärenden' mot din tabellnamn
+
+$sql = "SELECT * FROM ärenden"; 
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -41,10 +40,10 @@ $result = mysqli_query($conn, $sql);
             </thead>
             <tbody>
                 <?php
-                // Loop genom alla ärenden
+                
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                        // Färger för status
+                        
                         $status_color = "";
                         if ($row['status'] == 'Löst') {
                             $status_color = "green";
