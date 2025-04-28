@@ -47,7 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
 <div class="ticket-container">
+    <div class="logo-container">
+        <img src="TechSolve AB logo.png" alt="TechSolve AB" class="logo">
+    </div>
+
     <h2>Skapa Nytt Ärende</h2>
+
     <form action="create_ticket.php" method="POST">
         <div class="input-container">
             <label for="titel">Titel</label>
@@ -60,13 +65,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
 
         <div class="input-container">
-            <label for="kategori">Kategori</label>
-            <select name="kategori" id="kategori" required>
-                <option value="Tekniskt Problem">Tekniskt Problem</option>
-                <option value="Faktura">Faktura</option>
-                <option value="Annat">Annat</option>
-            </select>
-        </div>
+    <label for="kategori">Kategori</label>
+    <select name="kategori" id="kategori" required>
+        <option value="Tekniskt Problem">Tekniskt Problem</option>
+        <option value="Faktura">Faktura</option>
+        <option value="Kontoärende">Kontoärende</option>
+        <option value="Supportförfrågan">Supportförfrågan</option>
+        <option value="Produktfråga">Produktfråga</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Buggrapport">Buggrapport</option>
+        <option value="Försäljningsfråga">Försäljningsfråga</option>
+        <option value="Annat">Annat</option>
+    </select>
+</div>
+
 
         <div class="input-container">
             <label>Prioritet</label>
