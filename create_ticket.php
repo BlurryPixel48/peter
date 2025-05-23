@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     mysqli_stmt_bind_param($stmt, "ssssss", $titel, $beskrivning, $kategori, $prioritet, $skapad_av, $datum);
 
     
-    if (mysqli_stmt_execute($stmt)) {
+    if (mysqli_stmt_execute($stmt)) { 
         header("Location: index.php");
         exit();
     } else {

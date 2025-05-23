@@ -95,7 +95,7 @@ input[type="radio"] {
 button {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #5D9CEC, #4A89DC);
+    background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Grön gradient */
     color: white;
     border: none;
     border-radius: 12px;
@@ -106,8 +106,9 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #4A89DC, #5D9CEC);
+    background: linear-gradient(135deg, #388E3C, #2E7D32); /* Mörkare grön vid hover */
 }
+
 
 
 .logo-container {
