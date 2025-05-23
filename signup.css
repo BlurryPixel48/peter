@@ -1,96 +1,95 @@
 body {
-    background-color: #F8F9FA;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+    background-color: #F8F9FA; 
+    margin: 0;                /* Tar bort standardmarginal */
+    padding: 0;               /* Tar bort standardpadding */
+    font-family: Arial, sans-serif; /* Typsnitt */
+    display: flex;            /* Flexbox-layout */
+    justify-content: center;  /* Centrera horisontellt */
+    align-items: center;      /* Centrera vertikalt */
+    flex-direction: column;   /* Stapla innehåll vertikalt */
+    height: 100vh;            /* Full höjd på viewport */
 }
 
 .logo {
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: center;       /* Centrera logotyp */
+    margin-bottom: 30px;      /* Avstånd under logotyp */
 }
 
 .logo img {
-    width: 150px;  
-    height: auto;
-    object-fit: contain;
+    width: 150px;             /* Fast bredd */
+    height: auto;             /* Automatisk höjd */
+    object-fit: contain;      /* Bevara proportioner */
 }
 
 .signup-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+    background-color: white; 
+    padding: 30px;            /* Inre marginal */
+    border-radius: 8px;       /* Rundade hörn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skugga */
+    width: 100%;              /* Full bredd inom max-width */
+    max-width: 400px;         /* Maxbredd */
+    text-align: center;       /* Centrera text */
 }
 
 h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: #333;             
+    font-size: 24px;          /* Textstorlek */
+    margin-bottom: 20px;      /* Avstånd under */
 }
 
 .input-container {
-    margin-bottom: 15px;
+    margin-bottom: 15px;      /* Avstånd under input-fält */
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
+    width: 100%;              /* Full bredd */
+    padding: 10px;            /* Inre marginal */
+    border: 1px solid #ddd;   /* Ljus kant */
+    border-radius: 5px;       /* Rundade hörn */
+    font-size: 16px;          /* Textstorlek */
+    box-sizing: border-box;   /* Inkludera padding i bredd */
 }
 
 input:focus {
-    border-color: #4CAF50;
-    outline: none;
+    border-color: #4CAF50;   
+    outline: none;            /* Tar bort standardfokus */
 }
 
 .btn {
-    width: 100%;
-    padding: 12px;
+    width: 100%;              /* Full bredd */
+    padding: 12px;            /* Inre marginal */
     background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    color: white;            
+    border: none;             /* Ingen kant */
+    border-radius: 5px;       /* Rundade hörn */
+    font-size: 16px;          /* Textstorlek */
+    cursor: pointer;          /* Muspekare vid hover */
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Mörkare blå vid hover */
 }
 
 .login-link {
-    margin-top: 20px;
+    margin-top: 20px;         /* Avstånd ovanför länkar */
 }
 
 .login-link p {
-    font-size: 14px;
-    color: #333;
+    font-size: 14px;          /* Mindre text */
+    color: #333;              /* Mörk text */
 }
 
 .login-link a {
-    color: #007BFF;
-    text-decoration: none;
+    color: #007BFF;           
+    text-decoration: none;    /* Ingen understrykning */
 }
 
 .login-link a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Understrykning vid hover */
 }
 
-
 .error-message {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 15px;
+    color: red;               
+    font-size: 14px;          /* Mindre text */
+    margin-bottom: 15px;      /* Avstånd under felmeddelande */
 }

@@ -1,81 +1,81 @@
 body {
-    background-color: #F8F9FA;
+    background-color: #F8F9FA; /* Ljus bakgrundsfärg */
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+    font-family: Arial, sans-serif; /* Standard typsnitt */
+    display: flex; /* Flexbox-layout */
+    justify-content: center; /* Centrera horisontellt */
+    align-items: center; /* Centrera vertikalt */
+    flex-direction: column; /* Lägg elementen vertikalt */
+    height: 100vh; /* Full höjd på viewporten */
 }
 
 .logo {
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: center; /* Centrera logon */
+    margin-bottom: 30px; /* Avstånd under logon */
 }
 
 .logo img {
-    width: 150px;  
-    height: auto;
-    object-fit: contain;
+    width: 150px; /* Fast bredd på bilden */
+    height: auto; /* Bevara proportioner */
+    object-fit: contain; /* Förhindra att bilden beskärs */
 }
 
 .login-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Vit bakgrund */
+    padding: 30px; /* Inre marginal */
+    border-radius: 8px; /* Rundade hörn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga */
     width: 100%;
-    max-width: 400px;
-    text-align: center;
+    max-width: 400px; /* Maxbredd */
+    text-align: center; /* Centrera text */
 }
 
 h2 {
-    color: #333;
+    color: #333; /* Mörk textfärg */
     font-size: 24px;
     margin-bottom: 20px;
 }
 
 .input-container {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Avstånd mellan fält */
 }
 
 input {
-    width: 100%;
+    width: 100%; 
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inkludera padding i bredden */
 }
 
 input:focus {
-    border-color: #4CAF50;
+    border-color: #4CAF50; /* Grön kant vid fokus */
     outline: none;
 }
 
 .checkbox-container {
     margin-bottom: 20px;
     display: flex;
-    align-items: center;  
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 .checkbox-container input {
-    margin-right: 10px; 
+    margin-right: 10px; /* Avstånd till etiketten */
 }
 
 .checkbox-container label {
     font-size: 14px;
     color: #333;
-    margin: 0;  
+    margin: 0;
 }
 
 .btn {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
+    background-color: #007BFF; /* Blå knappfärg */
     color: white;
     border: none;
     border-radius: 5px;
@@ -84,7 +84,7 @@ input:focus {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Mörkare blå vid hover */
 }
 
 .forgot-password {
@@ -98,7 +98,7 @@ input:focus {
 }
 
 .forgot-password a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Understryk vid hover */
 }
 
 .register-link {
@@ -120,7 +120,7 @@ input:focus {
 }
 
 .error-message {
-    color: red;
+    color: red; /* Röd feltext */
     font-size: 14px;
     margin-bottom: 15px;
     text-align: center;

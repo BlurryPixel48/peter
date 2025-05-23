@@ -1,78 +1,73 @@
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Standard typsnitt för sidan */
     margin: 0;
     padding: 0;
-    background-color: #F8F9FA;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #F8F9FA; /* Ljus bakgrundsfärg */
+    display: flex; /* Använd flexbox för layout */
+    flex-direction: column; 
+    align-items: center; /* Centrera innehållet horisontellt */
 }
 
-
 .welcome {
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 30px; /* Avstånd från toppen */
+    text-align: center; /* Centrera texten */
 }
 
 .welcome h1 {
-    color: #333;
+    color: #333; /* Mörk textfärg för rubriken */
 }
 
-
 .ticket-container {
-    margin-top: 30px;
-    width: 80%;
-    max-width: 1000px;
-    border-collapse: collapse;
-    background-color: white;
+    margin-top: 30px; /* Avstånd från välkomstmeddelandet */
+    width: 80%; /* Bredd relativ till viewport */
+    max-width: 1000px; /* Maximal bredd */
+    border-collapse: collapse; /* Ta bort dubbelkant på tabell */
+    background-color: white; /* Vit bakgrund */
 }
 
 .ticket-container table {
-    width: 100%;
-    border: 1px solid #ddd;
-    text-align: left;
+    width: 100%; /* Tabell fyller hela behållaren */
+    border: 1px solid #ddd; /* Ljusgrå ram */
+    text-align: left; /* Vänsterjusterad text */
 }
 
 .ticket-container th, .ticket-container td {
-    padding: 12px;
-    border: 1px solid #ddd;
+    padding: 12px; /* Inre marginal */
+    border: 1px solid #ddd; /* Kantlinje mellan celler */
 }
 
 .ticket-container th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; 
+    color: white; 
 }
 
-
 .green {
-    background-color: #4CAF50;
+    background-color: #4CAF50; 
     color: white;
 }
 
 .yellow {
-    background-color: #FFC107;
+    background-color: #FFC107; 
     color: black;
 }
 
 .red {
-    background-color: #F44336;
+    background-color: #F44336; 
     color: white;
 }
 
-
 .create-ticket {
-    margin-top: 30px;
+    margin-top: 30px; /* Avstånd från tabellen */
 }
 
 .create-ticket .btn {
-    background-color: #007BFF;
+    background-color: #007BFF; /* Blå knapp */
     color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 12px 20px; /* Knappstorlek */
+    border-radius: 5px; /* Rundade hörn */
+    text-decoration: none; /* Ingen understrykning */
 }
 
 .create-ticket .btn:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Mörkare blå vid hover */
 }
