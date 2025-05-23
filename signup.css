@@ -7,7 +7,7 @@ body {
     justify-content: center;  /* Centrera horisontellt */
     align-items: center;      /* Centrera vertikalt */
     flex-direction: column;   /* Stapla innehåll vertikalt */
-    height: 100vh;            /* Full höjd på viewport */
+    height: 100vh;            
 }
 
 .logo {
@@ -44,7 +44,7 @@ h2 {
 input {
     width: 100%;              /* Full bredd */
     padding: 10px;            /* Inre marginal */
-    border: 1px solid #ddd;   /* Ljus kant */
+    border: 1px solid #ddd;   
     border-radius: 5px;       /* Rundade hörn */
     font-size: 16px;          /* Textstorlek */
     box-sizing: border-box;   /* Inkludera padding i bredd */
